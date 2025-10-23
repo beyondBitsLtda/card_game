@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- Indica que o documento segue o padrão HTML5. -->
+<html lang="pt-BR"> <!-- nforma que o conteúdo está em português do Brasil, ajudando na acessibilidade e SEO. -->
+<head>
+  <meta charset="utf-8" /> <!-- Define o padrão de codificação de caracteres (UTF-8), garantindo que acentos e símbolos sejam exibidos corretamente. -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" /> <!-- Torna o site responsivo, ajustando o layout à largura da tela do dispositivo (celular, tablet, etc.). -->
+  <title>Card Game - Protótipo</title> <!-- Define o título da página que aparece na aba do navegador. -->
+  <link rel="stylesheet" href="css/style.css" /> <!-- Importa o arquivo de estilos CSS, que define cores, tamanhos, fontes e layout da página. -->
+</head>
+<body>
+  <header> <!-- O <h1> serve como título visível e também como elemento importante para SEO. -->
+    <h1>Card Game — Protótipo</h1>
+  </header>
+
+  <main id="game"> <!-- O <main> marca o conteúdo principal da página.O atributo id="game" permite que o JavaScript manipule o jogo diretamente através desse identificador. -->
+    <section id="controls"> <!-- Define uma área de controle do jogo (botões, menus, etc.). O botão com id="startBtn" será usado no JavaScript para iniciar o jogo (por exemplo, gerar cartas ou embaralhar). -->
+    <button onclick="iniciarGame()" id="startBtn">Iniciar Jogo</button>
+    </section>
+
+    <section id="board">
+      <!-- Cartas estáticas -->
+      <!-- O id="board" indica que esta seção é o tabuleiro onde as cartas do jogo ficam.
+      O comentário " Cartas estáticas" apenas explica que essas cartas foram colocadas manualmente (não geradas via script). -->
+      <div class="card" data-id="1">
+        <img src="assets/images/card1.png" alt="Carta 1">
+        <h3>Fogo Salamandra</h3>
+        <p>Poder: 8</p>
+      </div>
+
+      <div class="card" data-id="2">
+        <img src="assets/images/card2.png" alt="Carta 2">
+        <h3>Água Serpente</h3>
+        <p>Poder: 6</p>
+      </div>
+
+      <div class="card" data-id="3">
+        <img src="assets/images/card3.png" alt="Carta 3">
+        <h3>Terra Tartaruga</h3>
+        <p>Poder: 7</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
